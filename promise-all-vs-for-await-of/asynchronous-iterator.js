@@ -1,5 +1,5 @@
-import { Octokit } from "octokit";
-import { env } from "../config.js";
+import {Octokit} from 'octokit';
+import {env} from '../config.js';
 
 const octokit = new Octokit({
   auth: env.ACCESS_TOKEN,
@@ -14,7 +14,7 @@ function parseCommits(data) {
     return [];
   }
 
-  const copiedData = { ...data };
+  const copiedData = {...data};
 
   delete copiedData.incomplete_results;
   delete copiedData.repository_selection;
@@ -50,7 +50,7 @@ async function* getPaginatedData(url) {
 }
 
 for await (const commit of getPaginatedData(
-  "/repos/michaltarasiuk/MichalTarasiuk/commits"
+  '/repos/michaltarasiuk/MichalTarasiuk/commits',
 )) {
   console.log(commit);
 }
