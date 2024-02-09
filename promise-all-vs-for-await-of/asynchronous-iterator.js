@@ -14,15 +14,15 @@ function parseCommits(data) {
     return [];
   }
 
-  const copiedData = {...data};
+  const dataCopy = {...data};
 
-  delete copiedData.incomplete_results;
-  delete copiedData.repository_selection;
-  delete copiedData.total_count;
+  delete dataCopy.incomplete_results;
+  delete dataCopy.repository_selection;
+  delete dataCopy.total_count;
 
-  const namespaceKey = Object.keys(data)[0];
+  const namespaceKey = Object.keys(dataCopy).at(0);
 
-  return data[namespaceKey];
+  return dataCopy[namespaceKey];
 }
 
 async function* getPaginatedData(url) {
