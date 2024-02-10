@@ -44,7 +44,7 @@ async function* getPaginatedData(url) {
     pagesRemaining = Boolean(linkHeader) && linkHeader.includes(`rel=\"next\"`);
 
     if (pagesRemaining) {
-      url = linkHeader.match(nextPattern)[0];
+      url = linkHeader.match(nextPattern).at(0);
     }
   }
 }

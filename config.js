@@ -1,5 +1,5 @@
-import { default as dotenv } from "dotenv";
-import { cleanEnv, str } from "envalid";
+import {default as dotenv} from 'dotenv';
+import {cleanEnv, str} from 'envalid';
 
 dotenv.config();
 
