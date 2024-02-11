@@ -25,7 +25,7 @@ function parseCommits(data) {
   return dataCopy[namespaceKey];
 }
 
-async function* getPaginatedData(url) {
+async function* getCommits(url) {
   const nextPattern = /(?<=<)([\S]*)(?=>; rel="Next")/i;
   let pagesRemaining = true;
 
@@ -49,8 +49,12 @@ async function* getPaginatedData(url) {
   }
 }
 
-for await (const commit of getPaginatedData(
+for await (const commit of getCommits(
   '/repos/michaltarasiuk/MichalTarasiuk/commits',
 )) {
   console.log(commit);
 }
+
+(function a() {});
+
+typeof a;
