@@ -2,8 +2,6 @@ import foo from './module.js';
 
 foo();
 
-function hello() {
+export default function hello() {
   console.log('hello');
 }
-
-export {hello as default};
