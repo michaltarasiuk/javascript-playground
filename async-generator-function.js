@@ -43,17 +43,5 @@ const files = readFiles('.');
 await files.next();
 await files.next();
 
-// {
-//   value: {
-//     name: '.gitignore',
-//     content: '# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.\n' +
-//       '\n' +
-//       '# dependencies\n' +
-//       'node_modules\n' +
-//       '\n' +
-//       '# ignore environment configuration files\n' +
-//       '.env\n'
-//   },
-//   done: false
-// }
+// Possible output: { name: 'file1.txt', content: '...' }
 await files.next();
