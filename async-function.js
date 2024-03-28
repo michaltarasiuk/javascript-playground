@@ -1,4 +1,4 @@
-const AsyncFunction = (async () => {}).constructor;
+const AsyncFunction = async function () {}.constructor;
 
 const add = new AsyncFunction('a', 'b', 'return a + b;');
 
