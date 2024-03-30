@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "core-js": "^3.36.1",
     "dotenv": "16.4.1",
     "envalid": "8.0.0",
     "octokit": "3.1.2"
