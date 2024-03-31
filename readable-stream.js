@@ -18,7 +18,6 @@ const stream = new ReadableStream({
         controller.close();
       } else {
         await wait(2000);
-
         controller.enqueue(value);
         await next();
       }
