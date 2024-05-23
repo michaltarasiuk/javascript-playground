@@ -54,7 +54,3 @@ for await (const commit of getCommits(
 )) {
   console.log(commit);
 }
-
-(function a() {});
-
-typeof a;
